@@ -1,4 +1,3 @@
-import { SectionTitle } from '@/shared/components/SectionTitle'
 import { Container } from '@/shared/components/Container'
 import { Logo } from '@/shared/components/Logo'
 

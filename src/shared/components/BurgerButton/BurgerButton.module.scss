@@ -1,0 +1,43 @@
+.BurgerButton {
+  --icon-width: 24px;
+  --ratio: 1.5;
+  --line-width: 2px;
+
+  width: var(--icon-width);
+  height: calc(var(--icon-width) / var(--ratio));
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.BurgerButton::before,
+.BurgerButton::after,
+.BurgerButton div {
+  height: var(--line-width);
+  width: 100%;
+  background-color: var(--white-text-100);
+  transition: 0.3s;
+}
+
+.BurgerButton::before,
+.BurgerButton::after {
+  content: '';
+  transform-origin: center;
+}
+
+.BurgerButton.Active {
+  height: var(--icon-width);
+}
+
+.BurgerButton.Active div {
+  opacity: 0;
+}
+
+.BurgerButton.Active::before {
+  transform: translateY(calc((var(--icon-width) - var(--line-width)) / 2)) rotate(45deg);
+}
+
+.BurgerButton.Active::after {
+  transform: translateY(calc((var(--icon-width) - var(--line-width)) / -2)) rotate(-45deg);
+}
