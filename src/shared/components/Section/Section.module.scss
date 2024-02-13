@@ -1,10 +1,8 @@
 .Section {
   width: 100%;
   padding: 30px 0px;
-}
 
-@media (min-width: $desktop-window-min-width) {
-  .Section {
+  @media (min-width: $desktop-window-min-width) {
     padding: 80px 0px;
   }
 }

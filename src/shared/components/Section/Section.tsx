@@ -1,8 +1,8 @@
-import { FC, ReactNode } from 'react'
+import { FC, ComponentPropsWithoutRef, ReactNode } from 'react'
 import { Container } from '../Container'
 import styles from './Section.module.scss'
 
-interface SectionProps {
+interface SectionProps extends ComponentPropsWithoutRef<'div'> {
   children: ReactNode
 }
 
