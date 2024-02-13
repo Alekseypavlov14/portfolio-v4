@@ -1,0 +1,38 @@
+:root {
+  --primary-color: $primary-color;
+  --primary-dark-color: $primary-dark-color;
+
+  --dark-100: $dark-100;
+  --white-text-100: $white-text-100;
+  --white-text-200: $white-text-200;
+
+  --grey-300: $grey-300;
+  --grey-500: $grey-500;
+  --grey-600: $grey-600;
+
+  --button-filled-disabled-background-color: $button-filled-disabled-background-color;
+  --button-filled-disabled-text-color: $button-filled-disabled-text-color;
+  --button-outlined-disabled-color: $button-outlined-disabled-color;
+
+  --button-border-gradient: $button-border-gradient;
+  --metal-icon-gradient: $metal-icon-gradient;
+  --metal-icon-hover-gradient: $metal-icon-hover-gradient;
+
+  --highlight-shadow-effect: $highlight-shadow-effect;
+  --highlight-desktop-shadow-effect: $highlight-desktop-shadow-effect;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-family-roboto);
+}
+
+body {}

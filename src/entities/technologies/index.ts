@@ -1,0 +1,1 @@
+export type { TechnologyEntity } from './technology.entity'
