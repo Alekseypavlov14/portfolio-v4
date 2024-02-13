@@ -7,8 +7,6 @@ export default function Home() {
     <div>
       <Container>
         <Logo />
-
-        <SectionTitle>About me</SectionTitle>
       </Container>
     </div>
   )

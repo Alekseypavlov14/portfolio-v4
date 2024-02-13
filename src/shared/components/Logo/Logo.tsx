@@ -8,13 +8,13 @@ import styles from './Logo.module.scss'
 
 interface LogoProps extends ComponentPropsWithoutRef<'div'> {}
 
-export const Logo: FC<LogoProps> = ({ onClick }) => {
+export const Logo: FC<LogoProps> = ({ onClick, ...props }) => {
   const { navigateHomePage } = useNavigation()
 
   const clickHandler = onClick || navigateHomePage
 
   return (
-    <div onClick={clickHandler} className={styles.Logo}>
+    <div onClick={clickHandler} className={styles.Logo} {...props}>
       <Image 
         className={styles.Logo} 
         src={logo}

@@ -6,9 +6,9 @@ interface SectionProps extends ComponentPropsWithoutRef<'div'> {
   children: ReactNode
 }
 
-export const Section: FC<SectionProps> = ({ children }) => {
+export const Section: FC<SectionProps> = ({ children, ...props }) => {
   return (
-    <div className={styles.Section}>
+    <div className={styles.Section} {...props}>
       <Container>
         {children}
       </Container>

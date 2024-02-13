@@ -5,9 +5,9 @@ interface SectionTitleProps extends ComponentProps<'h2'> {
   children: ReactNode
 }
 
-export const SectionTitle: FC<SectionTitleProps> = ({ children }) => {
+export const SectionTitle: FC<SectionTitleProps> = ({ children, ...props }) => {
   return (
-    <h2 className={styles.SectionTitle}>
+    <h2 className={styles.SectionTitle} {...props}>
       {children}
     </h2>
   )

@@ -10,11 +10,11 @@
   --grey-500: #{$grey-500};
   --grey-600: #{$grey-600};
 
+  --button-outlined-border-color: #{$button-outlined-border-color};
   --button-filled-disabled-background-color: #{$button-filled-disabled-background-color};
   --button-filled-disabled-text-color: #{$button-filled-disabled-text-color};
   --button-outlined-disabled-color: #{$button-outlined-disabled-color};
 
-  --button-border-gradient: #{$button-border-gradient};
   --metal-icon-gradient: #{$metal-icon-gradient};
   --metal-icon-hover-gradient: #{$metal-icon-hover-gradient};
 
@@ -39,4 +39,11 @@ body {
   width: 100%;
   font-size: 14px;
   background-color: var(--dark-100);
+}
+
+.button-grid {
+  display: flex;
+  align-items: start;
+  gap: 40px;
+  flex-wrap: wrap;
 }

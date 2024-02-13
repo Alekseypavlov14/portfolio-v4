@@ -5,9 +5,9 @@ interface ContainerProps extends ComponentPropsWithoutRef<'div'> {
   children: ReactNode
 }
 
-export const Container: FC<ContainerProps> = ({ children }) => {
+export const Container: FC<ContainerProps> = ({ children, ...props }) => {
   return (
-    <div className={styles.Container}>
+    <div className={styles.Container} {...props}>
       {children}
     </div>
   )
