@@ -1,9 +1,12 @@
 import { Logo } from '@/shared/components/Logo'
+import { Container } from '@/shared/components/Container'
 
 export default function Home() {
   return (
     <div>
-      <Logo />
+      <Container>
+        <Logo />
+      </Container>
     </div>
   )
 }
