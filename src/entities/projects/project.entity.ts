@@ -1,5 +1,6 @@
 import { ProjectTypeEntity } from '../project-types'
 import { TechnologyEntity } from '../technologies'
+import { Nullable } from '@/shared/types/nullable'
 import { Id } from '@/shared/types/id'
 
 export interface ProjectData {
@@ -8,8 +9,8 @@ export interface ProjectData {
   typeId: Id
   description: string
   imageSource: string
-  link: string | null
-  repository: string | null
+  link: Nullable<string>
+  repository: Nullable<string>
   technologiesIds: Id[]
   date: number
 }
@@ -20,8 +21,8 @@ export interface ProjectEntity {
   type: ProjectTypeEntity
   description: string
   imageSource: string
-  link: string | null
-  repository: string | null
+  link: Nullable<string>
+  repository: Nullable<string>
   technologies: TechnologyEntity[]
   date: number
 }
