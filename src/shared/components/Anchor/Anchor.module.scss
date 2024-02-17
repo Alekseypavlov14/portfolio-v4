@@ -1,0 +1,11 @@
+@layer components {
+  .Anchor {
+    color: var(--white-text-100);
+    transition: 0.3s;
+    text-decoration: none;
+  
+    &:hover {
+      color: var(--grey-600);
+    }
+  }
+}

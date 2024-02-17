@@ -1,0 +1,1 @@
+export { contactsConfig } from './contacts-config'
