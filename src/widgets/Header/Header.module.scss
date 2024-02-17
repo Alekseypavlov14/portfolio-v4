@@ -1,4 +1,6 @@
 .Header {
+  position: relative;
+  z-index: $widget-extra-priority-level;
   height: $header-height;
   width: 100%;
 }

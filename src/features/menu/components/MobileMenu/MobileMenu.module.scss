@@ -4,6 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: $widget-base-priority-level;
   transition: 0.5s;
   display: flex;
   flex-direction: column;

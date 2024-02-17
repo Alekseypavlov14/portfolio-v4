@@ -22,3 +22,8 @@ $highlight-desktop-shadow-effect: 0px 0px 150px 150px rgb(5, 60, 142, 0.25);
 
 $desktop-window-min-width: 769px;
 $header-height: 100px;
+
+// z-indexes
+$basic-overlay-level: 1;
+$widget-base-priority-level: 9;
+$widget-extra-priority-level: 10;
