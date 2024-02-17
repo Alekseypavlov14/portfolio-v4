@@ -1,0 +1,24 @@
+.Navigation {
+  align-items: center;
+  gap: 40px;
+  display: none;
+
+  @media (min-width: $desktop-window-min-width) {
+    display: flex;
+  }
+}
+
+.Link {
+  @include h4-mobile;
+  color: var(--white-text-100);
+  text-decoration: none;
+  transition: 0.3s;
+
+  @media (min-width: $desktop-window-min-width) {
+    @include h4-desktop;
+  }
+
+  &:hover {
+    color: var(--grey-600);
+  }
+}

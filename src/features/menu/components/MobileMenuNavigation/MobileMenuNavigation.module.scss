@@ -1,0 +1,12 @@
+.MobileMenuNavigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.Link {
+  @include h2-mobile;
+  color: var(--white-text-100);
+  text-decoration: none;
+}

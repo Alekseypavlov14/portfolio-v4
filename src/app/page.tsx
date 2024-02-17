@@ -1,12 +1,11 @@
-import { Container } from '@/shared/components/Container'
-import { Logo } from '@/shared/components/Logo'
+import { MobileMenu } from '@/features/menu'
+import { Header } from '@/widgets/Header'
 
 export default function Home() {
   return (
-    <div>
-      <Container>
-        <Logo />
-      </Container>
-    </div>
+    <>
+      <Header />
+      <MobileMenu />
+    </>
   )
 }

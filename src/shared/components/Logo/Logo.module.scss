@@ -1,4 +1,6 @@
-.Logo {
-  font-family: var(--font-family-oswald);
-  cursor: pointer;
+@layer components {
+  .Logo {
+    font-family: var(--font-family-oswald);
+    cursor: pointer;
+  }
 }

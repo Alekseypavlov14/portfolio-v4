@@ -9,6 +9,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (min-width: $desktop-window-min-width) {
+    display: none;
+  }
 }
 
 .BurgerButton::before,

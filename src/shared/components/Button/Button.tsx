@@ -13,11 +13,12 @@ interface ButtonProps extends WithRequired<ComponentProps<'button'>, 'onClick' |
   size: ButtonSize
 }
 
-export const Button: FC<ButtonProps> = ({ variant, size, children, ...props }) => {
+export const Button: FC<ButtonProps> = ({ variant, size, children, className, ...props }) => {
   const classNames = clsx(
     styles.Button, 
     styles[buttonVariantToCSSClassKeyMapper[variant]],
-    styles[buttonSizeToCSSClassKeyMapper[size]]
+    styles[buttonSizeToCSSClassKeyMapper[size]],
+    className
   )
 
   return (

@@ -1,11 +1,13 @@
-.SectionTitle {
-  @include h2-mobile;
-  text-align: center;
-  color: var(--white-text-100);
-  padding-bottom: 30px;
-
-  @media (min-width: $desktop-window-min-width) {
-    @include h2-desktop;
-    padding-bottom: 40px;
+@layer components {
+  .SectionTitle {
+    @include h2-mobile;
+    text-align: center;
+    color: var(--white-text-100);
+    padding-bottom: 30px;
+    
+    @media (min-width: $desktop-window-min-width) {
+      @include h2-desktop;
+      padding-bottom: 40px;
+    }
   }
 }
