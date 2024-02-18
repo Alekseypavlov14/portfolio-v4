@@ -1,18 +1,23 @@
 .Contacts {
   display: flex;
-  align-self: center;
+  align-items: center;
   gap: 20px;
 
   .ContactLink {
     width: 30px;
     aspect-ratio: 1;
+    
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   @media (min-width: $desktop-window-min-width) {
     gap: 30px;
 
     .ContactLink {
-      width: 4px;
+      width: 40px;
     }
   }
 }

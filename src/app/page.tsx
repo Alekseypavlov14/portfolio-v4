@@ -1,4 +1,5 @@
 import { MobileMenu } from '@/features/menu'
+import { HomeMain } from '@/widgets/HomeMain'
 import { Header } from '@/widgets/Header'
 
 export default function Home() {
@@ -6,6 +7,8 @@ export default function Home() {
     <>
       <Header />
       <MobileMenu />
+
+      <HomeMain />
     </>
   )
 }

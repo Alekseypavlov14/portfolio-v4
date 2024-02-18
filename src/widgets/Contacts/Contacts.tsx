@@ -10,12 +10,8 @@ export const Contacts: FC<ContactsProps> = () => {
   return (
     <div className={styles.Contacts}>
       {contactsConfig.map(contact => (
-        <Anchor className={styles.ContactLink} href={contact.href}>
-          <Image 
-            key={contact.href}
-            src={contact.iconSrc}
-            alt=''
-          />
+        <Anchor key={contact.href} className={styles.ContactLink} href={contact.href}>
+          <Image src={contact.iconSrc} alt='' />
         </Anchor>
       ))}
     </div>

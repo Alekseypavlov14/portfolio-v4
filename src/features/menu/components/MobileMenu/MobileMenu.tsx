@@ -4,7 +4,6 @@ import { FC } from 'react'
 import { isOpenedSelector, useMenuStore } from '../../store'
 import { MobileMenuNavigation } from '../MobileMenuNavigation'
 import { ContactsContainer } from '../ContactsContainer'
-import { Contacts } from '@/widgets/Contacts'
 import { clsx } from '@/shared/utils/clsx'
 import styles from './MobileMenu.module.scss'
 
@@ -18,9 +17,7 @@ export const MobileMenu: FC<MobileMenuProps> = () => {
   return (
     <div className={classNames}>
       <div className={styles.HeaderPlaceHolder} />
-
       <MobileMenuNavigation />
-      
       <ContactsContainer />
     </div>
   )
