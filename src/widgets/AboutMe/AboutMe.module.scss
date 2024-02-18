@@ -1,0 +1,21 @@
+.Columns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 40px;
+  
+  @media (min-width: $desktop-window-min-width) {
+    flex-direction: row;
+  }
+}
+
+.Paragraph {
+  @include text-desktop;
+  color: var(--white-text-200);
+  text-align: center;
+
+  @media (min-width: $desktop-window-min-width) {
+    @include text-mobile;
+  }
+}
