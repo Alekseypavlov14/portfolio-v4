@@ -54,3 +54,11 @@
     margin-top: 20px;
   }
 }
+
+.HomeCollaborateButton {
+  margin: 20px 0px;
+
+  @media (width >= $desktop-window-min-width) {
+    margin: 30px 0px;
+  }
+}

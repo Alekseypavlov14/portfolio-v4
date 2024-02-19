@@ -8,7 +8,7 @@ import { ButtonSize } from './types/button-size'
 import { clsx } from '@/shared/utils/clsx'
 import styles from './Button.module.scss'
 
-interface ButtonProps extends WithRequired<ComponentProps<'button'>, 'onClick' | 'children'> {
+export interface ButtonProps extends WithRequired<ComponentProps<'button'>, 'onClick' | 'children'> {
   variant: ButtonVariant
   size: ButtonSize
 }

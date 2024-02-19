@@ -1,10 +1,10 @@
-import { FC } from 'react'
+import { ComponentPropsWithoutRef, FC } from 'react'
 import { contactsConfig } from '@/configs/contacts'
 import { Anchor } from '@/shared/components/Anchor'
 import styles from './Contacts.module.scss'
 import Image from 'next/image'
 
-interface ContactsProps {}
+interface ContactsProps extends ComponentPropsWithoutRef<'div'> {}
 
 export const Contacts: FC<ContactsProps> = () => {
   return (
