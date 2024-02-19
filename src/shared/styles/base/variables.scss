@@ -24,6 +24,7 @@ $desktop-window-min-width: 769px;
 $header-height: 100px;
 
 // z-indexes
+$decor-background-level: -1;
 $basic-overlay-level: 1;
 $widget-base-priority-level: 9;
 $widget-extra-priority-level: 10;

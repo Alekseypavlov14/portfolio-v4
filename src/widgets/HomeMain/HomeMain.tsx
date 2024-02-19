@@ -2,6 +2,7 @@
 
 import { FC } from 'react'
 import { HomeMainButton } from './components/HomeMainButton'
+import { HighlightDecor } from '@/shared/components/HighlightDecor'
 import { Container } from '@/shared/components/Container'
 import { Contacts } from '@/widgets/Contacts'
 import { Avatar } from './components/Avatar'
@@ -24,6 +25,9 @@ export const HomeMain: FC<HomeMainProps> = () => {
           <Contacts />
         </div>
       </Container>
+
+      <HighlightDecor top='136px' left='69px' />
+      <HighlightDecor top='500px' right='0px' />
     </main>
   )
 }

@@ -1,7 +1,8 @@
 .HomeMain {
-  min-height: calc(100dvh - $header-height);
-  transition: 0.3s;
   width: 100%;
+  min-height: calc(100dvh - $header-height);
+  position: relative;
+  transition: 0.3s;
   padding-bottom: 30px;
 }
 

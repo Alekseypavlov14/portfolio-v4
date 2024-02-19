@@ -1,0 +1,1 @@
+export { HighlightDecor } from './HighlightDecor'
