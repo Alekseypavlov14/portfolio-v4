@@ -1,1 +1,1 @@
-export { routingConfig } from './routing-config'
+export { routingConfig, navbarLinksConfig } from './routing-config'

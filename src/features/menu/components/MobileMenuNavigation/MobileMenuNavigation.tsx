@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { navbarLinksConfig } from '@/configs/routing/routing-config'
+import { navbarLinksConfig } from '@/configs/routing'
 import styles from './MobileMenuNavigation.module.scss'
 import Link from 'next/link'
 
