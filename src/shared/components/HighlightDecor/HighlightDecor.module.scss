@@ -3,7 +3,7 @@
   z-index: $decor-background-level;
   box-shadow: var(--highlight-shadow-effect);
 
-  @media (min-width: $desktop-window-min-width) {
+  @media (width >= $desktop-window-min-width) {
     box-shadow: var(--highlight-desktop-shadow-effect);
   }
 }

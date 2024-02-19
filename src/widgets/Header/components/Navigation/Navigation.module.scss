@@ -1,11 +1,9 @@
 .Navigation {
+  display: flex;
   align-items: center;
   gap: 40px;
-  display: none;
 
-  @media (min-width: $desktop-window-min-width) {
-    display: flex;
-  }
+  @include desktopOnly;
 }
 
 .Link {
@@ -14,7 +12,7 @@
   text-decoration: none;
   transition: 0.3s;
 
-  @media (min-width: $desktop-window-min-width) {
+  @media (width >= $desktop-window-min-width) {
     @include h4-desktop;
   }
 

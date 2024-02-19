@@ -28,3 +28,16 @@ $decor-background-level: -1;
 $basic-overlay-level: 1;
 $widget-base-priority-level: 9;
 $widget-extra-priority-level: 10;
+
+// adaptive mixins 
+@mixin desktopOnly {
+  @media (width < $desktop-window-min-width) {
+    display: none;
+  }
+}
+
+@mixin mobileOnly {
+  @media (width >= $desktop-window-min-width) {
+    display: none;
+  }
+}

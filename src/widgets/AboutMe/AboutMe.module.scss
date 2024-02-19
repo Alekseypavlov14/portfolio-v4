@@ -5,7 +5,7 @@
   align-items: start;
   gap: 40px;
   
-  @media (min-width: $desktop-window-min-width) {
+  @media (width >= $desktop-window-min-width) {
     flex-direction: row;
   }
 }
@@ -15,7 +15,7 @@
   color: var(--white-text-200);
   text-align: center;
 
-  @media (min-width: $desktop-window-min-width) {
+  @media (width >= $desktop-window-min-width) {
     @include text-mobile;
   }
 }

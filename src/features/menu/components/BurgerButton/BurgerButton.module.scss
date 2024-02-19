@@ -10,9 +10,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  @media (min-width: $desktop-window-min-width) {
-    display: none;
-  }
+  @include mobileOnly;
 }
 
 .BurgerButton::before,

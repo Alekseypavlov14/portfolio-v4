@@ -11,9 +11,7 @@
   justify-content: space-between;
   background-color: var(--dark-100);
 
-  @media (min-width: $desktop-window-min-width) {
-    display: none;
-  }
+  @include mobileOnly;
 }
 
 .Closed {

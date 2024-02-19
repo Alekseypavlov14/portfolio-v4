@@ -13,7 +13,7 @@
     }
   }
 
-  @media (min-width: $desktop-window-min-width) {
+  @media (width >= $desktop-window-min-width) {
     gap: 30px;
 
     .ContactLink {

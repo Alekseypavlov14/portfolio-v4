@@ -1,7 +1,7 @@
 .HomeMainButton {
   margin: 20px 0px;
 
-  @media (min-width: $desktop-window-min-width) {
+  @media (width >= $desktop-window-min-width) {
     margin: 30px 0px;
   }
 }
