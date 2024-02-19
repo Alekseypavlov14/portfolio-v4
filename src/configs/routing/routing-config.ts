@@ -1,3 +1,4 @@
+import { aboutMeAnchor } from './constants'
 import { NavbarLinkConfig } from './types/navbar-link-config'
 import { RouteConfig } from './types/route-config'
 import { RoutesEnum } from './types/routes'
@@ -5,7 +6,7 @@ import { RoutesEnum } from './types/routes'
 // used for programmed navigation
 export const routingConfig: Record<RoutesEnum, RouteConfig> = {
   [RoutesEnum.homePage]: { url: '/' },
-  [RoutesEnum.aboutMeSection]: { url: '/#about-me'},
+  [RoutesEnum.aboutMeSection]: { url: `/#${aboutMeAnchor}` },
   [RoutesEnum.portfolioPage]: { url: '/portfolio' },
 }
 
