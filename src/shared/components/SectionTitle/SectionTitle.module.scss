@@ -1,9 +1,13 @@
 @layer components {
   .SectionTitle {
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 30px;
+
     @include h2-mobile;
     text-align: center;
     color: var(--white-text-100);
-    padding-bottom: 30px;
     
     @media (width >= $desktop-window-min-width) {
       @include h2-desktop;

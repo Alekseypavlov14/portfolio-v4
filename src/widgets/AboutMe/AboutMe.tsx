@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { HighlightDecor } from '@/shared/components/HighlightDecor'
 import { SectionTitle } from '@/shared/components/SectionTitle'
 import { Section } from '@/shared/components/Section'
 import styles from './AboutMe.module.scss'
@@ -8,7 +9,10 @@ interface AboutMeProps {}
 export const AboutMe: FC<AboutMeProps> = () => {
   return (
     <Section>
-      <SectionTitle>About me</SectionTitle>
+      <SectionTitle>
+        About me
+        <HighlightDecor top={'-10px'} left={'-37px'} />
+      </SectionTitle>
 
       <div className={styles.Columns}>
         <p className={styles.Paragraph}>
