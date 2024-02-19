@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { FC } from 'react'
 import { Contacts } from '@/widgets/Contacts'
 import styles from './ContactsContainer.module.scss'
 

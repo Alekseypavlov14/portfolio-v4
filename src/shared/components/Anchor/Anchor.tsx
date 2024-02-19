@@ -1,8 +1,9 @@
 import { ComponentPropsWithoutRef, FC } from 'react'
+import { WithRequired } from '@/shared/types/with-required'
 import { clsx } from '@/shared/utils/clsx'
 import styles from './Anchor.module.scss'
 
-interface AnchorProps extends ComponentPropsWithoutRef<'a'> {}
+interface AnchorProps extends WithRequired<ComponentPropsWithoutRef<'a'>, 'href' | 'children'> {}
 
 export const Anchor: FC<AnchorProps> = ({ className, children, ...props}) => {
   const classNames = clsx(styles.Anchor, className)
@@ -10,7 +11,7 @@ export const Anchor: FC<AnchorProps> = ({ className, children, ...props}) => {
   return (
     <a 
       className={classNames} 
-      target='_blank'
+      target={props.target || '_blank'}
       {...props}
     >
       {children}

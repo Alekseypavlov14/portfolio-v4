@@ -5,7 +5,7 @@ import { closeSelector, isOpenedSelector, openSelector, useMenuStore } from '../
 import { clsx } from '@/shared/utils/clsx'
 import styles from './BurgerButton.module.scss'
 
-interface BurgerButtonProps extends ComponentProps<'div'> {}
+interface BurgerButtonProps extends Omit<ComponentProps<'div'>, 'children'> {}
 
 export const BurgerButton: FC<BurgerButtonProps> = ({ className, onClick, ...props }) => {
   const isMenuOpened = useMenuStore(isOpenedSelector)

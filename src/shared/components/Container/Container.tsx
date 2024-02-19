@@ -1,10 +1,9 @@
-import { ComponentPropsWithoutRef, FC, ReactNode } from 'react'
+import { ComponentPropsWithoutRef, FC } from 'react'
+import { WithRequired } from '@/shared/types/with-required'
 import { clsx } from '@/shared/utils/clsx'
 import styles from './Container.module.scss'
 
-interface ContainerProps extends ComponentPropsWithoutRef<'div'> {
-  children: ReactNode
-}
+interface ContainerProps extends WithRequired<ComponentPropsWithoutRef<'div'>, 'children'> {}
 
 export const Container: FC<ContainerProps> = ({ children, className, ...props }) => {
   const classNames = clsx(styles.Container, className)

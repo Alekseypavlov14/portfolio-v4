@@ -7,7 +7,7 @@ import Image from 'next/image'
 import logo from './logo.svg'
 import styles from './Logo.module.scss'
 
-interface LogoProps extends ComponentPropsWithoutRef<'div'> {}
+interface LogoProps extends Omit<ComponentPropsWithoutRef<'div'>, 'children'> {}
 
 export const Logo: FC<LogoProps> = ({ onClick, className, ...props }) => {
   const { navigateHomePage } = useNavigation()

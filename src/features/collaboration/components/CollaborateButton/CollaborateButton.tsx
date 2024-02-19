@@ -1,3 +1,5 @@
+'use client'
+
 import { FC } from 'react'
 import { collaborateButtonText } from '../../constants'
 import { Button, ButtonProps } from '@/shared/components/Button'
