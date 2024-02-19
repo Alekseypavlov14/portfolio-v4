@@ -1,19 +1,12 @@
-import { MobileMenu } from '@/features/menu'
+import { StructureLayout } from '@/layouts/StructureLayout'
 import { HomeMain } from '@/widgets/HomeMain'
 import { AboutMe } from '@/widgets/AboutMe'
-import { Header } from '@/widgets/Header'
-import { Footer } from '@/widgets/Footer'
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <MobileMenu />
-
+    <StructureLayout>
       <HomeMain />
       <AboutMe />
-
-      <Footer />
-    </>
+    </StructureLayout>
   )
 }
