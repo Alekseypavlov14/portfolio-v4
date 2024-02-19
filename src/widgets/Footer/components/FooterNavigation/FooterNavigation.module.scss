@@ -1,0 +1,16 @@
+.FooterNavigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.FooterNavigationLink {
+  color: var(--white-text-100);
+  @include h4-mobile;
+  text-decoration: none;
+
+  @media (width >= $desktop-window-min-width) {
+    @include h4-mobile;
+  }
+}

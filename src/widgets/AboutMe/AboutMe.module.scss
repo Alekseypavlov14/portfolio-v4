@@ -1,13 +1,5 @@
 .Columns {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  
-  @media (width >= $desktop-window-min-width) {
-    flex-direction: row;
-  }
+  position: relative;
 }
 
 .Paragraph {

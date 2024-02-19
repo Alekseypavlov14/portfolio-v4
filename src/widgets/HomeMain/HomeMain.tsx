@@ -32,7 +32,7 @@ export const HomeMain: FC<HomeMainProps> = () => {
       </Container>
 
       <HighlightDecor top='136px' left='69px' />
-      <HighlightDecor top='500px' right='0px' />
+      <HighlightDecor bottom='20%' right='5%' />
     </main>
   )
 }

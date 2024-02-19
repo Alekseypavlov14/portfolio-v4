@@ -1,7 +1,8 @@
 import { MobileMenu } from '@/features/menu'
 import { HomeMain } from '@/widgets/HomeMain'
-import { Header } from '@/widgets/Header'
 import { AboutMe } from '@/widgets/AboutMe'
+import { Header } from '@/widgets/Header'
+import { Footer } from '@/widgets/Footer'
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
 
       <HomeMain />
       <AboutMe />
+
+      <Footer />
     </>
   )
 }

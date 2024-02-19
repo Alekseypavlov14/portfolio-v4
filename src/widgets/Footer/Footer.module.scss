@@ -1,0 +1,40 @@
+.Footer {
+  width: 100%;
+}
+.FooterSection {
+  width: 100%;
+  padding: 20px 0px 40px 0px;
+  
+  @media (width >= $desktop-window-min-width) {
+    padding: 40px 0px;
+  }
+}
+.FooterColumn {
+  display: flex;
+  justify-content: center;
+  
+  @media (width >= $desktop-window-min-width) {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &:nth-child(1) .Contacts {
+    @include desktopOnly;
+  }
+
+  &:nth-child(3) .Contacts {
+    @include mobileOnly;
+  }
+}
+
+.FooterCollaborateButton {
+  @include desktopOnly;
+}
+
+.Copyright {
+  @include h6-mobile;
+  color: var(--white-text-200);
+  text-align: center;
+  margin-top: 30px;
+}
