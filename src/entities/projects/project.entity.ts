@@ -15,14 +15,7 @@ export interface ProjectData {
   date: number
 }
 
-export interface ProjectEntity {
-  id: Id
-  name: string
+export interface ProjectEntity extends Omit<ProjectData, 'typeId' | 'technologiesIds'> {
   type: ProjectTypeEntity
-  description: string
-  imageSource: string
-  link: Nullable<string>
-  repository: Nullable<string>
   technologies: TechnologyEntity[]
-  date: number
 }
