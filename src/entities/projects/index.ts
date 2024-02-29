@@ -1,2 +1,7 @@
 export type { ProjectEntity } from './project.entity'
-export { ProjectsCollection } from './repository'
+
+export { 
+  ProjectsCollection,
+  getProjects,
+  dereferenceProject
+} from './repository'
