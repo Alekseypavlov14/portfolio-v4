@@ -1,0 +1,1 @@
+export { Exception, type IException } from './exception'

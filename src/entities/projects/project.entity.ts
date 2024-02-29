@@ -1,10 +1,10 @@
 import { ProjectTypeEntity } from '../project-types'
 import { TechnologyEntity } from '../technologies'
 import { Nullable } from '@/shared/types/nullable'
+import { Entity } from '@/shared/types/entity'
 import { Id } from '@/shared/types/id'
 
-export interface ProjectData {
-  id: Id
+export interface ProjectData extends Entity {
   name: string
   typeId: Id
   description: string
