@@ -1,0 +1,1 @@
+export { ProjectTypesCollection } from './collection'

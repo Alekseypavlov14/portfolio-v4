@@ -1,0 +1,1 @@
+export { TechnologiesCollection } from './collection'

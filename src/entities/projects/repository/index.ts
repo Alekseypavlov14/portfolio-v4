@@ -1,0 +1,1 @@
+export { ProjectsCollection } from './collection'
