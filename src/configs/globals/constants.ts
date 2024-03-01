@@ -1,0 +1,1 @@
+export const HOME_PAGE_PORTFOLIO_CARDS_AMOUNT = 3

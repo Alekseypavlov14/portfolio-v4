@@ -8,7 +8,7 @@ export interface ProjectData extends Entity {
   name: string
   typeId: Id
   description: string
-  imageSource: string
+  imageSource: Nullable<string>
   link: Nullable<string>
   repository: Nullable<string>
   technologiesIds: Id[]
