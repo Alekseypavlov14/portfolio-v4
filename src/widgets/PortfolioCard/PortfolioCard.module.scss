@@ -1,3 +1,79 @@
 .PortfolioCard {
+  max-width: 320px;
+  border-radius: 10px;
+  padding: 20px 10px;
+  background-color: var(--grey-300);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white-text-100);
+}
+
+.ProjectType {
+  --dash-width: 3px;
+  --dash-gap: -5px;
+
+  width: fit-content;
+  font-family: var(--font-family-roboto);
+  font-size: 12px;
+  line-height: 1.3;
+  text-align: center;
+  position: relative;
+
+  &::before, 
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    width: var(--dash-width);
+    height: 1px;
+    background-color: var(--white-text-100);
+  }
+
+  &::before {
+    left: var(--dash-gap);
+  } 
   
+  &::after {
+    right: var(--dash-gap);
+  }
+}
+
+.Title {
+  margin-top: 10px;
+  font-family: var(--font-family-oswald);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.Description {
+  margin-top: 10px;
+  font-family: var(--font-family-roboto);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--white-text-200);
+  text-align: center;
+}
+
+.Buttons {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  gap: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.Footer {
+  display: flex;
+  gap: 30px;
+  align-items: flex-end;
+}
+
+.Technologies {
+  flex: 1 1 auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }

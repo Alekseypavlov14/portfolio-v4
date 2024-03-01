@@ -1,4 +1,6 @@
 import { ComponentPropsWithoutRef, FC } from 'react'
+import { PortfolioCardLinkButton } from './components/PortfolioCardLinkButton'
+import { PortfolioCardRepoButton } from './components/PortfolioCardRepoButton'
 import { ProjectEntity, hasImage } from '@/entities/projects'
 import { Chip } from '@/shared/components/Chip'
 import { clsx } from '@/shared/utils/clsx'
@@ -25,7 +27,10 @@ export const PortfolioCard: FC<PortfolioCardProps> = ({ className, project, ...p
       <div className={styles.Title}>{project.name}</div>
       <div className={styles.Description}>{project.description}</div>
 
-      <div className={styles.Buttons}></div>
+      <div className={styles.Buttons}>
+        <PortfolioCardLinkButton link={project.link} />
+        <PortfolioCardRepoButton repository={project.repository} />
+      </div>
 
       <div className={styles.Footer}>
         <div className={styles.Technologies}>
@@ -33,6 +38,8 @@ export const PortfolioCard: FC<PortfolioCardProps> = ({ className, project, ...p
             <Chip key={technology.id}>{technology.name}</Chip>
           ))}
         </div>
+
+        <Chip>{project.date}</Chip>
       </div>
     </div>
   )
