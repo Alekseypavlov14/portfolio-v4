@@ -1,4 +1,5 @@
 import { ComponentPropsWithoutRef, FC } from 'react'
+import { DateTime, formatDateWide } from '@/shared/utils/date-time'
 import { PortfolioCardLinkButton } from './components/PortfolioCardLinkButton'
 import { PortfolioCardRepoButton } from './components/PortfolioCardRepoButton'
 import { ProjectEntity, hasImage } from '@/entities/projects'
@@ -13,6 +14,8 @@ interface PortfolioCardProps extends Omit<ComponentPropsWithoutRef<'div'>, 'chil
 
 export const PortfolioCard: FC<PortfolioCardProps> = ({ className, project, ...props }) => {
   const classNames = clsx(styles.PortfolioCard, className)
+
+  const formattedDate = formatDateWide(new DateTime(project.date))
 
   return (
     <div className={classNames} {...props}>
@@ -39,7 +42,7 @@ export const PortfolioCard: FC<PortfolioCardProps> = ({ className, project, ...p
           ))}
         </div>
 
-        <Chip>{project.date}</Chip>
+        <Chip>{formattedDate}</Chip>
       </div>
     </div>
   )
