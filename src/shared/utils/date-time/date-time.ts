@@ -1,3 +1,5 @@
+import { Comparisons } from '../comparisons'
+
 export interface TimeData {
   years?: number
   months?: number
@@ -101,5 +103,13 @@ export class DateTime {
     if (timeData.milliseconds) currentDate.setMilliseconds(currentDate.getMilliseconds() + timeData.milliseconds)
 
     return new DateTime(DateTime.mapDateToTimeData(currentDate))
+  }
+
+  static sortByDateStartingByNewest<T>(items: T[], selector: (item: T) => DateTime) {
+    return Comparisons.sortDescendingBy(items, item => selector(item).getTimeInMilliseconds())
+  }
+
+  static sortByDateStartingByOldest<T>(items: T[], selector: (item: T) => DateTime) {
+    return DateTime.sortByDateStartingByNewest(items, selector).toReversed()
   }
 }
