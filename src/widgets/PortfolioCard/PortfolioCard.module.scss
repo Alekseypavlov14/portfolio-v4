@@ -5,8 +5,19 @@
   background-color: var(--grey-300);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   color: var(--white-text-100);
+}
+
+.Stretch {
+  align-self: stretch;
+}
+
+.Headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ProjectType {

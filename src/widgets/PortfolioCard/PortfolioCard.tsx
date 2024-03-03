@@ -10,10 +10,11 @@ import Image from 'next/image'
 
 interface PortfolioCardProps extends Omit<ComponentPropsWithoutRef<'div'>, 'children'> {
   project: ProjectEntity
+  stretch?: boolean
 }
 
-export const PortfolioCard: FC<PortfolioCardProps> = ({ className, project, ...props }) => {
-  const classNames = clsx(styles.PortfolioCard, className)
+export const PortfolioCard: FC<PortfolioCardProps> = ({ className, project, stretch, ...props }) => {
+  const classNames = clsx(styles.PortfolioCard, stretch && styles.Stretch, className)
 
   const formattedDate = formatDateWide(new DateTime(project.date))
 
@@ -25,9 +26,11 @@ export const PortfolioCard: FC<PortfolioCardProps> = ({ className, project, ...p
         </div>
       ) : null}
 
-      <div className={styles.ProjectType}>{project.type.name}</div>
+      <div className={styles.Headline}>
+        <div className={styles.ProjectType}>{project.type.name}</div>
+        <div className={styles.Title}>{project.name}</div>
+      </div>
 
-      <div className={styles.Title}>{project.name}</div>
       <div className={styles.Description}>{project.description}</div>
 
       <div className={styles.Buttons}>
