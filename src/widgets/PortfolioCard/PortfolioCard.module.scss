@@ -11,7 +11,9 @@
 }
 
 .Stretch {
-  align-self: stretch;
+  @media (width >= $desktop-window-min-width) {
+    align-self: stretch;
+  }
 }
 
 .Headline {

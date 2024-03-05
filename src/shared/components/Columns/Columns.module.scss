@@ -1,14 +1,16 @@
-.Columns {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: $grid-container-mobile-gap;
-  width: 100%;
-  
-  @media (width >= $desktop-window-min-width) {
-    flex: 1 0 auto;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: $grid-container-gap;
+@layer components {
+  .Columns {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: $grid-container-mobile-gap;
+    width: 100%;
+    
+    @media (width >= $desktop-window-min-width) {
+      flex: 1 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: $grid-container-gap;
+    }
   }
 }
