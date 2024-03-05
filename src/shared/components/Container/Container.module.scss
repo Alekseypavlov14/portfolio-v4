@@ -3,6 +3,6 @@
     margin: 0 auto;
     height: 100%;
     padding: 0px $grid-container-padding;
-    max-width: calc($grid-container-width + 2 * $grid-container-padding);
+    max-width: $grid-container-width-with-paddings;
   }
 }

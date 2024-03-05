@@ -25,6 +25,7 @@ $desktop-window-min-width: 769px;
 
 $grid-container-width: 1040px;
 $grid-container-padding: 15px;
+$grid-container-width-with-paddings: $grid-container-width + 2 * $grid-container-padding;
 $grid-container-gap: 40px;
 $grid-container-mobile-gap: 30px;
 

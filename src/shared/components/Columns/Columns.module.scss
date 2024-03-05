@@ -12,5 +12,10 @@
       justify-content: space-between;
       gap: $grid-container-gap;
     }
+
+    @media ($desktop-window-min-width <= width <= $grid-container-width-with-paddings) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
 }
