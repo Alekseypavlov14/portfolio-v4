@@ -1,0 +1,1 @@
+export { PortfolioCardWrapperForDecor } from './PortfolioCardWrapperForDecor'

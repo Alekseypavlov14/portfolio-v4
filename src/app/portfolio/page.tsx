@@ -1,17 +1,10 @@
-'use client'
-
-import { useNavigation } from '@/services/navigation'
-import { Container } from '@/shared/components/Container'
-import { Logo } from '@/shared/components/Logo'
+import { StructureLayout } from '@/layouts/StructureLayout'
+import { PortfolioPageList } from '@/widgets/PortfolioPageList'
 
 export default function Portfolio() {
-  const  { navigateAboutMeSection } = useNavigation()
-  
   return (
-    <div>
-      <Container>
-        <Logo onClick={navigateAboutMeSection} />
-      </Container>
-    </div>
+    <StructureLayout>
+      <PortfolioPageList />
+    </StructureLayout>
   )
 }
