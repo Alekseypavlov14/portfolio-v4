@@ -16,7 +16,15 @@
     @include h4-desktop;
   }
 
-  &:hover {
-    color: var(--grey-600);
+  @media (hover: hover) {
+    &:hover {
+      color: var(--grey-600);
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      color: var(--grey-600);
+    }
   }
 }
