@@ -7,8 +7,13 @@
 
 .FooterNavigationLink {
   color: var(--white-text-100);
+  transition: 0.3s;
   @include h4-mobile;
   text-decoration: none;
+
+  &:hover {
+    color: var(--white-text-200);
+  }
 
   @media (width >= $desktop-window-min-width) {
     @include h4-mobile;
