@@ -44,10 +44,10 @@ export class Comparisons {
   }
 
   static sortAscendingBy<T>(items: T[], selector: Selector<T>) {
-    return items.toSorted((a, b) => selector(a) - selector(b))
+    return [...items].sort((a, b) => selector(a) - selector(b))
   }
 
   static sortDescendingBy<T>(items: T[], selector: Selector<T>) {
-    return Comparisons.sortAscendingBy(items, selector).toReversed()
+    return Comparisons.sortAscendingBy([...items], selector).reverse()
   }
 }

@@ -110,6 +110,6 @@ export class DateTime {
   }
 
   static sortByDateStartingByOldest<T>(items: T[], selector: (item: T) => DateTime) {
-    return DateTime.sortByDateStartingByNewest(items, selector).toReversed()
+    return DateTime.sortByDateStartingByNewest([...items], selector).reverse()
   }
 }
