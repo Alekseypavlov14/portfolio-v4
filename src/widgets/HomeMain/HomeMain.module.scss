@@ -4,6 +4,10 @@
   position: relative;
   transition: 0.3s;
   padding-bottom: 30px;
+
+  @media (width >= $large-device-min-width) {
+    min-height: fit-content;
+  }
 }
 
 .Container {
