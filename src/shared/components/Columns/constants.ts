@@ -1,0 +1,1 @@
+export const defaultColumnsAmount = 1

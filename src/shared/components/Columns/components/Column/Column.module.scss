@@ -1,0 +1,5 @@
+@layer components {
+  .Column {
+    flex: 0 0 calc((100% - (var(--columns) - 1) * var(--gap)) / var(--columns));
+  }
+}

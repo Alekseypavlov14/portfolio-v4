@@ -1,16 +1,21 @@
 @layer components {
   .Columns {
+    // needed for nested Column component
+    --gap: #{$grid-container-mobile-gap};
+
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: $grid-container-mobile-gap;
+    gap: var(--gap);
     width: 100%;
     
     @media (width >= $desktop-window-min-width) {
+      --gap: #{$grid-container-gap};
+
       flex: 1 0 auto;
       flex-direction: row;
       justify-content: space-between;
-      gap: $grid-container-gap;
+      align-items: stretch;
     }
 
     @media ($desktop-window-min-width <= width <= $grid-container-width-with-paddings) {
