@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { buttonOutlinedVariant, buttonBigSize } from '@/shared/components/Button'
+import { FOOTER_COLUMNS_AMOUNT } from '@/configs/globals'
 import { CollaborateButton } from '@/features/collaboration'
 import { FooterNavigation } from './components/FooterNavigation'
 import { Column, Columns } from '@/shared/components/Columns'
@@ -14,7 +15,7 @@ export const Footer: FC<FooterProps> = () => {
   return (
     <footer className={styles.Footer}>
       <Section className={styles.FooterSection}>
-        <Columns columns={3}>
+        <Columns columns={FOOTER_COLUMNS_AMOUNT}>
           <Column className={styles.FooterColumn}>
             <Logo />
   

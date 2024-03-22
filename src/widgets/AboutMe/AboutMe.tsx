@@ -1,5 +1,6 @@
 import { FC, use } from 'react'
 import { getTextFragmentContentBySelector, textFragmentKeys } from '@/entities/text-fragments'
+import { ABOUT_ME_COLUMNS_AMOUNT } from '@/configs/globals'
 import { Columns, Column } from '@/shared/components/Columns'
 import { HighlightDecor } from '@/shared/components/HighlightDecor'
 import { aboutMeAnchor } from '@/configs/routing'
@@ -21,7 +22,7 @@ export const AboutMe: FC<AboutMeProps> = () => {
         <HighlightDecor top={'-10px'} left={'-37px'} />
       </SectionTitle>
 
-      <Columns className={styles.Columns} columns={3}>
+      <Columns className={styles.Columns} columns={ABOUT_ME_COLUMNS_AMOUNT}>
         <Column className={styles.Paragraph}>{aboutMeFragment1}</Column>
         <Column className={styles.Paragraph}>{aboutMeFragment2}</Column>
         <Column className={styles.Paragraph}>{aboutMeFragment3}</Column>
