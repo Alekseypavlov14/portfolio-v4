@@ -12,7 +12,7 @@ export const MobileMenuNavigation: FC<MobileMenuNavigationProps> = () => {
   const closeMenu = useMenuStore(closeSelector)
 
   return (
-    <div className={styles.MobileMenuNavigation}>
+    <nav className={styles.MobileMenuNavigation}>
       {navbarLinksConfig.map(link => (
         <NavigationLink 
           className={styles.Link}
@@ -24,6 +24,6 @@ export const MobileMenuNavigation: FC<MobileMenuNavigationProps> = () => {
           {link.label}
         </NavigationLink>
       ))}
-    </div>
+    </nav>
   )
 }

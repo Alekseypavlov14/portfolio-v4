@@ -10,10 +10,10 @@ export const Section: FC<SectionProps> = ({ children, className, ...props }) => 
   const classNames = clsx(styles.Section, className)
 
   return (
-    <div className={classNames} {...props}>
+    <section className={classNames} {...props}>
       <Container>
         {children}
       </Container>
-    </div>
+    </section>
   )
 }
