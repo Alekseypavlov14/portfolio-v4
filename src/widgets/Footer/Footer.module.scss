@@ -10,11 +10,8 @@
   }
 }
 .FooterColumn {
-  display: flex;
-  justify-content: center;
-  
   @media (width >= $desktop-window-min-width) {
-    align-self: stretch;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
@@ -30,6 +27,7 @@
 
 .FooterCollaborateButton {
   @include desktopOnly;
+  align-self: flex-end; 
 }
 
 .Copyright {

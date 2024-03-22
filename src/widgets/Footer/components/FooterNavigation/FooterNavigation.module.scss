@@ -16,6 +16,6 @@
   }
 
   @media (width >= $desktop-window-min-width) {
-    @include h4-mobile;
+    @include h4-desktop;
   }
 }
