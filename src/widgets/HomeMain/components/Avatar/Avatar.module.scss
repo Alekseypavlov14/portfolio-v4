@@ -2,6 +2,8 @@
   margin: 0 auto;
   width: clamp(240px, 50%, 400px);
   aspect-ratio: 3 / 4;
+  animation: appear-top 0.8s ease-out forwards;
+  opacity: 0;
   
   img {
     width: 100%;

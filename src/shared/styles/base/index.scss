@@ -1,4 +1,5 @@
 @forward '/src/shared/styles/base/variables';
 @forward '/src/shared/styles/base/typography';
+@forward '/src/shared/styles/base/animations.scss';
 
 @layer base, components, variants;

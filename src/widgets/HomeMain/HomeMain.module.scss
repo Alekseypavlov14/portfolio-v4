@@ -39,6 +39,8 @@
   @include h1-mobile;
   color: var(--white-text-100);
   text-align: center;
+  animation: appear-top 0.5s ease-out forwards;
+  opacity: 0;
 
   @media (width >= $desktop-window-min-width) {
     @include h1-desktop;
@@ -51,6 +53,8 @@
   color: var(--white-text-200);
   text-align: center;
   margin-top: 10px;
+  animation: appear-top 0.5s ease-out 0.3s forwards;
+  opacity: 0;
 
   @media (width >= $desktop-window-min-width) {
     @include h3-desktop;
@@ -61,6 +65,8 @@
 
 .HomeCollaborateButton {
   margin: 20px 0px;
+  animation: appear-top 0.5s ease-out 0.7s forwards;
+  opacity: 0;
 
   @media (width >= $desktop-window-min-width) {
     margin: 30px 0px;
