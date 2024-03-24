@@ -15,7 +15,10 @@ export class AuthService implements IAuthService {
 
   async createSession() {
     const session = await sessionsService.create()
-    await this.authSessionSender.sendSessionIdToAdmin(session.id)
+
+    this.authSessionSender.sendSessionIdToAdmin(session.id)
+    sessionsService.activateById(session.id)
+    
     return session
   }
 
