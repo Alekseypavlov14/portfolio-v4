@@ -1,4 +1,5 @@
 import { TelegramBotService } from '../telegram-bot.interface'
+import { sessionIdMessage } from '../constants'
 import { Telegraf } from 'telegraf'
 import { Id } from '@/shared/types/id'
 
@@ -10,6 +11,7 @@ export class TelegrafTelegramBotService implements TelegramBotService {
   }
 
   async sendSessionIdToAdmin(sessionId: Id) {
+    this.telegraf.telegram.sendMessage(this.adminChatId, sessionIdMessage)
     this.telegraf.telegram.sendMessage(this.adminChatId, sessionId)
   }
 }
