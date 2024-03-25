@@ -1,4 +1,4 @@
-import { SESSIONS_SESSION_STORAGE_KEY } from './constants'
+import { SESSIONS_SESSION_STORAGE_KEY } from '../constants'
 import { SessionStorage } from '@/shared/utils/session-storage'
 import { Id } from '@/shared/types/id'
 

@@ -1,4 +1,4 @@
-import { SessionEntity, sessionsService } from '@/entities/sessions'
+import { SessionEntity, SessionsService } from '@/entities/sessions'
 import { AuthSessionSender } from './auth-session-sender'
 import { Id } from '@/shared/types/id'
 
@@ -11,30 +11,33 @@ interface IAuthService {
 }
 
 export class AuthService implements IAuthService {
-  constructor(private readonly authSessionSender: AuthSessionSender) {}
+  constructor(
+    private readonly authSessionSender: AuthSessionSender,
+    private readonly sessionsService: SessionsService
+  ) {}
 
   async createSession() {
-    const session = await sessionsService.create()
+    const session = await this.sessionsService.create()
 
     this.authSessionSender.sendSessionIdToAdmin(session.id)
-    sessionsService.activateById(session.id)
+    this.sessionsService.activateById(session.id)
     
     return session
   }
 
   async activateSessionById(sessionId: Id) {
-    await sessionsService.activateById(sessionId)
+    await this.sessionsService.activateById(sessionId)
   }
 
   checkSession(sessionId: string): Promise<boolean> {
-    return sessionsService.checkById(sessionId)
+    return this.sessionsService.checkById(sessionId)
   }
 
   closeSessionById(sessionId: Id) {
-    return sessionsService.closeById(sessionId)
+    return this.sessionsService.closeById(sessionId)
   }
 
   closeAllSessions(): Promise<void> {
-    return sessionsService.closeAll()
+    return this.sessionsService.closeAll()
   }
 }
