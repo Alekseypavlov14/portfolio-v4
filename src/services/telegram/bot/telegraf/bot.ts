@@ -11,7 +11,7 @@ export class TelegrafTelegramBotService implements TelegramBotService {
   }
 
   async sendSessionIdToAdmin(sessionId: Id) {
-    this.telegraf.telegram.sendMessage(this.adminChatId, sessionIdMessage)
-    this.telegraf.telegram.sendMessage(this.adminChatId, sessionId)
+    await this.telegraf.telegram.sendMessage(this.adminChatId, sessionIdMessage)
+    await this.telegraf.telegram.sendMessage(this.adminChatId, sessionId)
   }
 }
