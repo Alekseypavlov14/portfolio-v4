@@ -1,5 +1,7 @@
 export enum RoutesEnum {
   homePage = 'homePage',
   portfolioPage = 'portfolioPage',
-  aboutMeSection = 'aboutMeSection'
+  aboutMeSection = 'aboutMeSection',
+  adminPage = 'adminPage',
+  authPage = 'authPage'
 }

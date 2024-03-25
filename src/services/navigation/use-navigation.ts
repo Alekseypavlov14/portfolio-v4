@@ -8,6 +8,8 @@ export interface Navigation {
   navigateAboutMeSection: NavigationCallback
   navigatePortfolioPage: NavigationCallback
   navigateExternalPage: ExternalNavigationCallback
+  navigateAdminPage: NavigationCallback
+  navigateAuthPage: NavigationCallback
 }
 
 export function useNavigation(): Navigation {
@@ -17,11 +19,15 @@ export function useNavigation(): Navigation {
   const navigateAboutMeSection: NavigationCallback = () => router.push(routingConfig.aboutMeSection.url)
   const navigatePortfolioPage: NavigationCallback = () => router.push(routingConfig.portfolioPage.url)
   const navigateExternalPage: ExternalNavigationCallback = (url, target) => window.open(url, target !== undefined ? target : '_blank')
+  const navigateAdminPage: NavigationCallback = () => router.push(routingConfig.adminPage.url)
+  const navigateAuthPage: NavigationCallback = () => router.push(routingConfig.authPage.url)
 
   return { 
     navigateHomePage, 
     navigateAboutMeSection,
     navigatePortfolioPage,
-    navigateExternalPage
+    navigateExternalPage,
+    navigateAdminPage,
+    navigateAuthPage,
   }
 }
