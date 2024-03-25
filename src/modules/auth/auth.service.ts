@@ -1,4 +1,4 @@
-import { SessionEntity, sessionsService } from './sessions'
+import { SessionEntity, sessionsService } from '@/entities/sessions'
 import { AuthSessionSender } from './auth-session-sender'
 import { Id } from '@/shared/types/id'
 
