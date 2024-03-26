@@ -1,1 +1,1 @@
-export { useCheckSession } from './hooks/use-check-session'
+export { useIsSessionActive } from './hooks/use-is-session-active'

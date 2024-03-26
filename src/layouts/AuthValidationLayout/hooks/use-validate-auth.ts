@@ -1,5 +1,5 @@
 import { updateIsValidSelector, useAuthValidationStore, setNotCheckingSelector, isValidSelector, isCheckingSelector, setCheckingSelector, setInvalidSelector, resetStateSelector } from '../store'
-import { useCheckSession } from '@/modules/auth/client'
+import { useIsSessionActive } from '@/modules/auth/client'
 import { useNavigation } from '@/services/navigation'
 import { useEffect } from 'react'
 
@@ -16,7 +16,7 @@ export function useValidateAuth() {
   useEffect(() => {
     resetState()
 
-    useCheckSession()
+    useIsSessionActive()
       .then(updateIsValid)
       .then(setNotChecking)
   }, [])

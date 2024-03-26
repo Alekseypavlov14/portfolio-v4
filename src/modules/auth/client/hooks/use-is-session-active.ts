@@ -5,7 +5,7 @@ import { Id } from '@/shared/types/id'
 
 export type CheckSessionCallback = (result: boolean) => void
 
-export async function useCheckSession(): Promise<boolean> {
+export async function useIsSessionActive(): Promise<boolean> {
   const sessionId = sessionsSessionStorage.getItem()
   if (!sessionId) return false
 
