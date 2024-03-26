@@ -13,6 +13,8 @@ interface AuthValidationActions {
   updateIsValid(isValid: boolean): void
   setValid(): void
   setInvalid(): void
+
+  resetState(): void
 }
 
 interface AuthValidationStore extends AuthValidationState, AuthValidationActions {}
@@ -27,6 +29,8 @@ export const useAuthValidationStore = create<AuthValidationStore>(set => ({
   updateIsValid: (isValid) => set(state => ({ ...state, isValid })),
   setValid: () => set(state => ({ ...state, isValid: true })),
   setInvalid: () => set(state => ({ ...state, isValid: false })),
+
+  resetState: () => set(state => ({ ...state, isValid: false, isChecking: true }))
 }))
 
 export const isCheckingSelector = (store: AuthValidationStore) => store.isChecking
@@ -38,3 +42,5 @@ export const isValidSelector = (store: AuthValidationStore) => store.isValid
 export const updateIsValidSelector = (store: AuthValidationStore) => store.updateIsValid
 export const setValidSelector = (store: AuthValidationStore) => store.setValid
 export const setInvalidSelector = (store: AuthValidationStore) => store.setInvalid
+
+export const resetStateSelector = (store: AuthValidationStore) => store.resetState

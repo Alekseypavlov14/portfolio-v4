@@ -1,19 +1,16 @@
 import { sessionsSessionStorage } from '@/entities/sessions/client'
-import { useNavigation } from '@/services/navigation'
 import { APIEndpoints } from '@/configs/api'
 import { httpService } from '@/shared/utils/http'
-import { useEffect } from 'react'
 import { Id } from '@/shared/types/id'
 
-export function useCheckSession() {
-  const { navigateAuthPage } = useNavigation()
+export type CheckSessionCallback = (result: boolean) => void
 
-  // use effect is needed because otherwise sessionStorage is not defined
-  useEffect(() => {
-    const sessionId = sessionsSessionStorage.getItem()
-    if (!sessionId) return navigateAuthPage()
-  
-    httpService.post<Id, void>(APIEndpoints.checkAuth, sessionId)
-      .catch(navigateAuthPage)
-  }, [])
+export async function useCheckSession(callback: CheckSessionCallback) {
+  const sessionId = sessionsSessionStorage.getItem()
+  if (!sessionId) return callback(false)
+
+  const result = await httpService.post<Id, boolean>(APIEndpoints.checkAuth, sessionId)
+    .catch(() => false)
+
+  callback(result)
 }
