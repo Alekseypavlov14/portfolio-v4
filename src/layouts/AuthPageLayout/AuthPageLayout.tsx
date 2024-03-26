@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import styles from './AuthPageLayout.module.scss'
+import { Centered } from '@/shared/components/Centered'
 
 interface AuthPageLayoutProps {
   children: ReactNode
@@ -7,8 +7,8 @@ interface AuthPageLayoutProps {
 
 export function AuthPageLayout({ children }: AuthPageLayoutProps) {
   return (
-    <div className={styles.AuthPageLayout}>
+    <Centered>
       {children}
-    </div>
+    </Centered>
   )
 }

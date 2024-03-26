@@ -1,8 +1,9 @@
 'use client'
 
+import { ReactNode } from 'react'
 import { isCheckingSelector, isValidSelector, useAuthValidationStore } from './store'
 import { useValidateAuth } from './hooks/use-validate-auth'
-import { ReactNode } from 'react'
+import { Centered } from '@/shared/components/Centered'
 
 interface AuthValidationLayoutProps {
   children: ReactNode
@@ -16,12 +17,12 @@ export function AuthValidationLayout({ children }: AuthValidationLayoutProps) {
 
   // during check process
   if (isChecking) return (
-    <>Checking Authentication...</>
+    <Centered>Checking Authentication...</Centered>
   )
 
   // if invalid authentication - redirect to auth page
   if (!isValid) return (
-    <>Authentication is invalid</>
+    <Centered>Authentication is invalid</Centered>
   )
 
   return (
