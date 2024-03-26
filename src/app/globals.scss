@@ -5,6 +5,7 @@
   --dark-100: #{$dark-100};
   --white-text-100: #{$white-text-100};
   --white-text-200: #{$white-text-200};
+  --black: #{$black};
 
   --grey-300: #{$grey-300};
   --grey-500: #{$grey-500};
@@ -39,6 +40,8 @@
     height: 100%;
     width: 100%;
     font-size: 14px;
+    font-family: var(--font-family-roboto);
     background-color: var(--dark-100);
+    color: var(--white-text-100);
   }
 }
