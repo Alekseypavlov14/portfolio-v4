@@ -1,1 +1,1 @@
-export { checkSession } from './utils/check-session'
+export { useCheckSession } from './hooks/use-check-session'
