@@ -16,7 +16,8 @@ export function useValidateAuth() {
   useEffect(() => {
     resetState()
 
-    useCheckSession(updateIsValid)
+    useCheckSession()
+      .then(updateIsValid)
       .then(setNotChecking)
   }, [])
 
