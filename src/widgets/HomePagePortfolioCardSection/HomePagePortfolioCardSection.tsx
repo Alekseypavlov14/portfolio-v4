@@ -3,12 +3,12 @@ import { HomePagePortfolioCardsButton } from './components/HomePagePortfolioCard
 import { Columns, Column } from '@/shared/components/Columns'
 import { PortfolioCard } from '@/widgets/PortfolioCard'
 import { SectionTitle } from '@/shared/components/SectionTitle'
-import { useProjects } from '@/entities/projects'
+import { getProjects } from '@/entities/projects'
 import { Section } from '@/shared/components/Section'
 import styles from './HomePagePortfolioCardSection.module.scss'
 
-export function HomePagePortfolioCardSection() {
-  const projects = useProjects()
+export async function HomePagePortfolioCardSection() {
+  const projects = await getProjects()
 
   return (
     <Section>

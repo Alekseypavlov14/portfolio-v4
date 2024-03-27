@@ -1,4 +1,3 @@
-import { FC, use } from 'react'
 import { getTextFragmentContentBySelector, textFragmentKeys } from '@/entities/text-fragments'
 import { ABOUT_ME_COLUMNS_AMOUNT } from '@/configs/globals'
 import { Columns, Column } from '@/shared/components/Columns'
@@ -8,12 +7,10 @@ import { SectionTitle } from '@/shared/components/SectionTitle'
 import { Section } from '@/shared/components/Section'
 import styles from './AboutMe.module.scss'
 
-interface AboutMeProps {}
-
-export const AboutMe: FC<AboutMeProps> = () => {
-  const aboutMeFragment1 = use(getTextFragmentContentBySelector(textFragmentKeys.aboutMe1))
-  const aboutMeFragment2 = use(getTextFragmentContentBySelector(textFragmentKeys.aboutMe2))
-  const aboutMeFragment3 = use(getTextFragmentContentBySelector(textFragmentKeys.aboutMe3))
+export async function AboutMe() {
+  const aboutMeFragment1 = await getTextFragmentContentBySelector(textFragmentKeys.aboutMe1)
+  const aboutMeFragment2 = await getTextFragmentContentBySelector(textFragmentKeys.aboutMe2)
+  const aboutMeFragment3 = await getTextFragmentContentBySelector(textFragmentKeys.aboutMe3)
   
   return (
     <Section id={aboutMeAnchor}>

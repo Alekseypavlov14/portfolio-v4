@@ -4,13 +4,13 @@ import { Column, Columns } from '@/shared/components/Columns'
 import { HighlightDecor } from '@/shared/components/HighlightDecor'
 import { PortfolioCard } from '@/widgets/PortfolioCard'
 import { SectionTitle } from '@/shared/components/SectionTitle'
-import { useProjects } from '@/entities/projects'
+import { getProjects } from '@/entities/projects'
 import { Section } from '@/shared/components/Section'
 import { isOdd } from '@/shared/utils/numbers'
 import styles from './PortfolioPageList.module.scss'
 
-export function PortfolioPageList() {
-  const projects = useProjects()
+export async function PortfolioPageList() {
+  const projects = await getProjects()
 
   return (
     <Section>
