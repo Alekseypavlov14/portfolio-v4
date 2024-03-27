@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 }
 
 // prevents fetch cache by default
-export const fetchCache = 'default-no-store'
+export const revalidate = 0
 
 export default function RootLayout({
   children,
