@@ -1,0 +1,11 @@
+@layer components {
+  .EntityListTitle {
+    @include h4-mobile;
+    margin-bottom: $section-vertical-padding-mobile / 2;
+    
+    @media (width >= $desktop-window-min-width) {
+      @include h4-desktop;
+      margin-bottom: $section-vertical-padding / 2;
+    }
+  }
+}
