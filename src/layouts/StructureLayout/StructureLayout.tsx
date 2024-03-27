@@ -1,8 +1,8 @@
 import { FC, ReactNode } from 'react'
 import { MobileMenu } from '@/features/menu'
+import { Wrapper } from '@/shared/components/Wrapper'
 import { Header } from '@/widgets/Header'
 import { Footer } from '@/widgets/Footer'
-import styles from './StructureLayout.module.scss'
 
 interface StructureLayoutProps {
   children: ReactNode
@@ -10,13 +10,13 @@ interface StructureLayoutProps {
 
 export const StructureLayout: FC<StructureLayoutProps> = ({ children }) => {
   return (
-    <div className={styles.StructureLayout}>
+    <Wrapper>
       <Header />
       <MobileMenu />
 
       {children}
       
       <Footer />
-    </div>
+    </Wrapper>
   )
 }

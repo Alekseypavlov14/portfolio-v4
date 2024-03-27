@@ -1,4 +1,5 @@
 import { AuthValidationLayout } from '@/layouts/AuthValidationLayout'
+import { AdminStructureLayout } from '@/layouts/AdminStructureLayout'
 import { ReactNode } from 'react'
 
 interface AdminPageLayoutProps {
@@ -8,7 +9,9 @@ interface AdminPageLayoutProps {
 export default function AdminPageLayout({ children }: AdminPageLayoutProps) {
   return (
     <AuthValidationLayout>
-      {children}
+      <AdminStructureLayout>
+        {children}
+      </AdminStructureLayout>
     </AuthValidationLayout>
   )
 }

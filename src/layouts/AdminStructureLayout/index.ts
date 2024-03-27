@@ -1,0 +1,1 @@
+export { AdminStructureLayout } from './AdminStructureLayout'
