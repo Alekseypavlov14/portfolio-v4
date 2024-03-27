@@ -1,0 +1,20 @@
+.LoaderSpinner {
+  --size: 40px;
+
+  width: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: calc(var(--size) / 8) solid var(--grey-300);
+  border-top-color: var(--grey-600);
+  animation: loader-spin 1s linear;
+}
+
+@keyframes loader-spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

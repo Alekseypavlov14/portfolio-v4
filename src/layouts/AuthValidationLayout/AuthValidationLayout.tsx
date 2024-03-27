@@ -3,7 +3,9 @@
 import { ReactNode } from 'react'
 import { isCheckingSelector, isValidSelector, useAuthValidationStore } from './store'
 import { useValidateAuth } from './hooks/use-validate-auth'
+import { LoaderSpinner } from '@/shared/components/LoaderSpinner'
 import { Centered } from '@/shared/components/Centered'
+import styles from './AuthValidationLayout.module.scss'
 
 interface AuthValidationLayoutProps {
   children: ReactNode
@@ -17,7 +19,11 @@ export function AuthValidationLayout({ children }: AuthValidationLayoutProps) {
 
   // during check process
   if (isChecking) return (
-    <Centered>Checking Authentication...</Centered>
+    <Centered className={styles.AuthLoadingContainer}>
+      <LoaderSpinner />
+
+      Checking Authentication...
+    </Centered>
   )
 
   // if invalid authentication - redirect to auth page
