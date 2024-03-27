@@ -1,10 +1,10 @@
 @layer components {
   .Section {
     width: 100%;
-    padding: 30px 0px;
+    padding: $section-vertical-padding-mobile 0px;
 
     @media (width >= $desktop-window-min-width) {
-      padding: 80px 0px;
+      padding: $section-vertical-padding 0px;
     }
   }
 }
