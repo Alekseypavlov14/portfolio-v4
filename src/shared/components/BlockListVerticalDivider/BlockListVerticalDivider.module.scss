@@ -1,0 +1,13 @@
+@layer components {
+  .BlockListVerticalDivider {
+    --gap: #{$section-vertical-padding-mobile};
+
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap) / 2);
+
+    @media (width >= $desktop-window-min-width) {
+      --gap: #{$section-vertical-padding};
+    }
+  }
+}
