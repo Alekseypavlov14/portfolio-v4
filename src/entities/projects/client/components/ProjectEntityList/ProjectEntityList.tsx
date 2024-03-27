@@ -4,7 +4,6 @@ import { areItemsShownSelector, hideItemsSelector, isItemsLinkNeededSelector, re
 import { EntityList, EntityListBottomLink, EntityListItem, EntityListItems, EntityListTitle, hideItemsLinkText, showItemsLinkText } from '@/shared/components/EntityList'
 import { ProjectEntity } from '@/entities/projects'
 import { useEffect } from 'react'
-import styles from './ProjectEntityList.module.scss'
 
 interface ProjectEntityListProps {
   projects: ProjectEntity[]
