@@ -12,5 +12,7 @@ export async function useIsSessionActive(): Promise<boolean> {
   const result = await httpService.post<Id, boolean>(APIEndpoints.checkAuth, sessionId)
     .catch(() => false)
 
+  if (!result) sessionsSessionStorage.clear()
+
   return result
 }

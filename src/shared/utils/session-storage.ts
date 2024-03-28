@@ -30,4 +30,8 @@ export class SessionStorage<T> {
     if (this.isDefaultValueDefined(this.defaultValue)) return this.defaultValue
     throw new Exception(404)
   }
+
+  clear(): void {
+    sessionStorage.removeItem(this.key)
+  }
 }
