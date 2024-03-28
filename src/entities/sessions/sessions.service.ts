@@ -1,5 +1,7 @@
+import { SESSION_ACTIVITY_TIME } from './constants'
 import { DatabaseCollection } from '@/shared/database'
 import { SessionEntity } from './session.entity'
+import { DateTime } from '@/shared/utils/date-time'
 import { Id } from '@/shared/types/id'
 
 interface ISessionsService {
@@ -14,17 +16,36 @@ export class SessionsService implements ISessionsService {
   constructor(private readonly sessionCollection: DatabaseCollection<SessionEntity>) {}
 
   create() {
-    const sessionData: Omit<SessionEntity, 'id'> = { isActive: false }
+    const expiresMoment = new DateTime()
+      .getDateTimeAfter(SESSION_ACTIVITY_TIME)
+      .getTimeInMilliseconds()
+
+    const sessionData: Omit<SessionEntity, 'id'> = { 
+      isActive: false,
+      expires: expiresMoment
+    }
+
     return this.sessionCollection.create(sessionData)
   }
 
   async activateById(id: Id) {
-    await this.sessionCollection.updateById(id, { isActive: true })
+    const expiresMoment = new DateTime()
+      .getDateTimeAfter(SESSION_ACTIVITY_TIME)
+      .getTimeInMilliseconds()
+
+    await this.sessionCollection.updateById(id, { 
+      isActive: true,
+      expires: expiresMoment
+    })
   }
 
   async checkById(id: string) {
     const session = await this.sessionCollection.getItemById(id)
-    return session.isActive
+
+    const isExpired = new DateTime().isMomentEarlier(new DateTime(session.expires))
+    if (isExpired) this.closeById(session.id)
+
+    return session.isActive && !isExpired
   }
 
   closeById(id: Id) {

@@ -13,12 +13,14 @@ export interface TimeData {
 export class DateTime {
   private time: Date
 
+  constructor()
   constructor(timeData: number)
   constructor(TimeData: Date)
   constructor(timeData: TimeData)
-  constructor(timeData: number | Date | TimeData = Date.now()) {
+  constructor(timeData?: number | Date | TimeData) {
     if (typeof timeData === 'number') this.time = new Date(timeData)
     else if (timeData instanceof Date) this.time = timeData
+    else if (timeData === undefined) this.time = new Date()
     else this.time = DateTime.mapTimeDataToDate(timeData)
   }
   
@@ -103,6 +105,16 @@ export class DateTime {
     if (timeData.milliseconds) currentDate.setMilliseconds(currentDate.getMilliseconds() + timeData.milliseconds)
 
     return new DateTime(DateTime.mapDateToTimeData(currentDate))
+  }
+
+  isMomentEarlier(moment: DateTime): boolean {
+    const currentMoment = this.time.getTime()
+    const givenMoment = moment.time.getTime()
+    return givenMoment <= currentMoment
+  }
+
+  isMomentLater(moment: DateTime): boolean {
+    return !this.isMomentEarlier(moment)
   }
 
   static sortByDateStartingByNewest<T>(items: T[], selector: (item: T) => DateTime) {
