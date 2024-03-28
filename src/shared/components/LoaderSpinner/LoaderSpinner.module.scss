@@ -5,7 +5,7 @@
   aspect-ratio: 1;
   border-radius: 50%;
   box-sizing: border-box;
-  border: calc(var(--size) / 8) solid var(--grey-300);
+  border: calc(var(--size) / 10) solid var(--grey-300);
   border-top-color: var(--grey-600);
   animation: loader-spin 1s linear;
 }
