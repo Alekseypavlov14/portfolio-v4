@@ -1,0 +1,1 @@
+export interface HTTPHeaders extends Record<string, string> {}
