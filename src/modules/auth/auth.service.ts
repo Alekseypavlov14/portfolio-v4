@@ -29,8 +29,9 @@ export class AuthService implements IAuthService {
     await this.sessionsService.activateById(sessionId)
   }
 
-  checkSession(sessionId: string): Promise<boolean> {
-    return this.sessionsService.checkById(sessionId)
+  async checkSession(sessionId?: string): Promise<boolean> {
+    if (!sessionId) return false
+    return await this.sessionsService.checkById(sessionId).catch(() => false)
   }
 
   closeSessionById(sessionId: Id) {
